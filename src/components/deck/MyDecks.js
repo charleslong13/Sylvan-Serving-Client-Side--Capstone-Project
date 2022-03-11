@@ -17,7 +17,6 @@ export const MyDecks = () => {
 	useEffect(() => {
         
 		const playerId = localStorage["playerId"]
-        
 		getThisPlayer(playerId).then((player) => {
             setIsLoading(false)
 			setCurrentPlayer(player)
@@ -25,11 +24,11 @@ export const MyDecks = () => {
 	}, [])
 
 	useEffect(() => {
-		// Query string parameter
+		// needed to check if the currentPlayer.id existed so that I could pass in playerId 
+        //on the line below without it being undefined since when the state is initially set it is undefined
         if (currentPlayer.id) {
 		const playerId = currentPlayer.id
 		getDeckByCurrentPlayer(playerId).then((deck) => {
-            // setDeck(deck)
             setIsLoading(false)
 			setFoundDeck(deck.filter(deck1 => deck1["player"]["id"] === parseInt(playerId)))
 		})}
