@@ -36,6 +36,8 @@ export const Register = () => {
                 .then(res => {
                     if ("token" in res) {
                         localStorage.setItem("ss_token", res.token)
+                        //added line below to store the playerId in local storage so we can reference to get the current user 
+                        localStorage.setItem("playerId", res.id)
                         history.push("/")
                     }
                 })
