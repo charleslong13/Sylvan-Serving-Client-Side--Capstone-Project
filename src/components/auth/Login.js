@@ -27,6 +27,8 @@ export const Login = () => {
             .then(res => {
                 if ("valid" in res && res.valid && "token" in res) {
                     localStorage.setItem("ss_token", res.token)
+                    //added line below to store the playerId in local storage so we can reference to get the current user 
+                    localStorage.set("playerId", res.id)
                     history.push("/")
                 }
                 else {
@@ -46,7 +48,7 @@ export const Login = () => {
                     <h1>Sylvan Serving</h1>
                     <h2>Please sign in</h2>
                     <fieldset>
-                        <label htmlFor="inputUsername"> Username address </label>
+                        <label htmlFor="inputUsername"> Username </label>
                         <input ref={username} type="username" id="username" className="form-control" placeholder="Username address" required autoFocus />
                     </fieldset>
                     <fieldset>
