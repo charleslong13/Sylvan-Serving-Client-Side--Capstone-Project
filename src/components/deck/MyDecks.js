@@ -53,30 +53,6 @@ if(isLoading) return <>Loading data...</>
                             <div className="deckAuthor">by {completedDecks.player?.user.username}</div> 
                             <div className="playStyle">Play style: {completedDecks.playStyle.label}</div>
                             <img className="commander_image" src={completedDecks.commander} alt="commander_image" />
-                            <b><div className="deckList">Creatures:</div></b>
-                            <div className="deckList1" > {completedDecks.creatures}</div>
-                            <p></p>
-                            <b><div className="deckList">Artifacts:</div></b>
-                            <div className="deckList1">{completedDecks.artifacts}</div>
-                            <p></p>
-                            <b><div className="deckList">Enchantments:</div></b>
-                            <div className="deckList1">{completedDecks.enchantments}</div>
-                            <p></p>
-                            <b><div className="deckList">Instants:</div></b>
-                            <div className="deckList1">{completedDecks.instants}</div>
-                            <p></p>
-                            <b><div className="deckList">Sorceries:</div></b>
-                            <div className="deckList1">{completedDecks.sorceries}</div>
-                            <p></p>
-                            <b><div className="deckList">Lands:</div></b>
-                            <div className="deckList1">{completedDecks.lands}</div>
-                            <p></p>
-                            <b><div className="deckList">Wins:</div></b>
-                            <div className="deckList">{completedDecks.wins}</div>
-                            <p></p>
-                            <b><div className="deckList">Losses:</div></b>
-                            <div className="deckList">{completedDecks.losses}</div>
-                            <p></p>
                             <b><div className="deckList">Power Level:</div></b>
                             <div className="deckList">{completedDecks.powerLevel}</div>
                             <p></p>
