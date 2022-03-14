@@ -19,6 +19,9 @@ export const NavBar = () => {
                 <Link className="navbar_item" to="/MyDeckList">My Decks</Link>
             </li>
             <li className="navbar__item">
+                <Link className="navbar_item" to="/decks/new">Create New Deck</Link>
+            </li>
+            <li className="navbar__item">
                 <Link className="navbar_item" to="/info">Rules And Info</Link>
             </li>
             
