@@ -14,11 +14,7 @@ export const DeckList = () => {
 
     return (
         <>
-            <center><button className="btn btn-2 btn-sep icon-create"
-                onClick={() => {
-                    history.push({ pathname: "/decks/new" })
-                }}
-            >Create New Deck List</button></center>
+            <i><b><center><h2>Deck List Feed</h2></center></b></i>
             <article className="decks">
                 {
                     decks.map(deck => {
