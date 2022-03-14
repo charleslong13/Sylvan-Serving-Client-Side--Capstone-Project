@@ -1,5 +1,6 @@
 import React from "react"
 import {Route} from "react-router-dom"
+import { DeckForm } from "./deck/DeckForm"
 import { DeckList } from "./deck/DeckList"
 import { MyDecks } from "./deck/MyDecks"
 import {Home} from "./home/home"
@@ -17,6 +18,12 @@ export const ApplicationViews = () => {
         </Route>
         <Route exact path="/MyDeckList">
             <MyDecks />
+        </Route>
+        <Route exact path="/decks/new">
+            <DeckForm />
+        </Route>
+        <Route exact path="/decks/edit/:deckId(\d+)">
+            <DeckForm editDeck = {true}/>
         </Route>
     </main>
     </>

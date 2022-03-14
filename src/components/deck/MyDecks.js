@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 import { getDeckByCurrentPlayer } from "./DeckManager"
 import { Link } from "react-router-dom"
 import { getThisPlayer } from "../players/playerManager"
-
+import "./decks.css"
 
 
 
@@ -49,22 +49,50 @@ if(isLoading) return <>Loading data...</>
                         return foundDeck ? <center>
 
                             <div className="completedDeckList"><div key={`completedDecks.id-${completedDecks.id}`}>
-                             <Link to={`/decks/${completedDecks.id}`}>{completedDecks.title} </Link>
-                             <div className="deckAuthor">by {completedDecks.player?.user.username}</div> 
+                            <Link to={`/decks/${completedDecks.id}`}>{completedDecks.title} </Link>
+                            <div className="deckAuthor">by {completedDecks.player?.user.username}</div> 
                             <div className="playStyle">Play style: {completedDecks.playStyle.label}</div>
                             <img className="commander_image" src={completedDecks.commander} alt="commander_image" />
-                            <div className="deckList">Creatures: {completedDecks.creatures}</div>
-                            <div className="deckList">Artifacts: {completedDecks.artifacts}</div>
-                            <div className="deckList">Enchantments: {completedDecks.enchantments}</div>
-                            <div className="deckList">Instants: {completedDecks.instants}</div>
-                            <div className="deckList">Sorceries: {completedDecks.sorceries}</div>
-                            <div className="deckList">Lands: {completedDecks.lands}</div>
-                            <div className="deckList">Wins: {completedDecks.wins}</div>
-                            <div className="deckList">Losses: {completedDecks.losses}</div>
-                            <div className="deckList">Power Level: {completedDecks.powerLevel}</div>
-                            <div className="deckList">Primer: {completedDecks.primer}</div>
+                            <b><div className="deckList">Creatures:</div></b>
+                            <div className="deckList1" > {completedDecks.creatures}</div>
+                            <p></p>
+                            <b><div className="deckList">Artifacts:</div></b>
+                            <div className="deckList1">{completedDecks.artifacts}</div>
+                            <p></p>
+                            <b><div className="deckList">Enchantments:</div></b>
+                            <div className="deckList1">{completedDecks.enchantments}</div>
+                            <p></p>
+                            <b><div className="deckList">Instants:</div></b>
+                            <div className="deckList1">{completedDecks.instants}</div>
+                            <p></p>
+                            <b><div className="deckList">Sorceries:</div></b>
+                            <div className="deckList1">{completedDecks.sorceries}</div>
+                            <p></p>
+                            <b><div className="deckList">Lands:</div></b>
+                            <div className="deckList1">{completedDecks.lands}</div>
+                            <p></p>
+                            <b><div className="deckList">Wins:</div></b>
+                            <div className="deckList">{completedDecks.wins}</div>
+                            <p></p>
+                            <b><div className="deckList">Losses:</div></b>
+                            <div className="deckList">{completedDecks.losses}</div>
+                            <p></p>
+                            <b><div className="deckList">Power Level:</div></b>
+                            <div className="deckList">{completedDecks.powerLevel}</div>
+                            <p></p>
+                            <b><div className="deckList">Primer:</div></b>
+                            <div className="deckList">{completedDecks.primer}</div>
                             </div>
                             </div>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                            <p></p>
                         </center>
                         : <div> none </div>
                     } 
