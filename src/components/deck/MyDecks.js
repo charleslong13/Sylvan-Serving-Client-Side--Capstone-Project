@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react"
-import { getDeckByCurrentPlayer } from "./DeckManager"
+import { deleteDeck, getDeckByCurrentPlayer } from "./DeckManager"
 import { Link } from "react-router-dom"
 import { getThisPlayer } from "../players/playerManager"
 import "./decks.css"
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min"
 
 
 
@@ -11,7 +12,7 @@ export const MyDecks = () => {
 	const [currentPlayer, setCurrentPlayer] = useState({})
     const [isLoading, setIsLoading] = useState(true)
     const [foundDeck, setFoundDeck] = useState([])
-
+    const history = useHistory()
 
 
 	useEffect(() => {
@@ -58,6 +59,16 @@ if(isLoading) return <>Loading data...</>
                             <p></p>
                             <b><div className="deckList">Primer:</div></b>
                             <div className="deckList">{completedDecks.primer}</div>
+                            <button type="button" className="button" onClick={() => {
+                               let text
+                               if (window.confirm("Are you sure you want to delete this deck?") === true) {
+                                   deleteDeck(completedDecks.id).then(() => history.push("/deckfeed"));}
+                                   else {text = "You canceled!"}
+                                   
+                               }}>Delete</button>
+                            <button type="button" className="button" onClick={() => {
+                                history.push(`/decks/edit/${completedDecks.id}`)}
+                            }>Edit</button>
                             </div>
                             </div>
                             <p></p>
