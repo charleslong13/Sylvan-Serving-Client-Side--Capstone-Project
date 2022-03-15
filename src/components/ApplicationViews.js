@@ -4,8 +4,12 @@ import { DeckDetails } from "./deck/DeckDetails"
 import { DeckForm } from "./deck/DeckForm"
 import { DeckList } from "./deck/DeckList"
 import { MyDecks } from "./deck/MyDecks"
+import { EventForm } from "./events/EventForm"
+import { EventList } from "./events/EventList"
 import {Home} from "./home/home"
 import { PlayerDetails } from "./players/PlayerDetails"
+
+
 export const ApplicationViews = () => {
     return <>
     <main style={{
@@ -23,6 +27,12 @@ export const ApplicationViews = () => {
         </Route>
         <Route exact path="/decks/new">
             <DeckForm />
+        </Route>
+        <Route exact path="/events">
+            <EventList />
+        </Route>
+        <Route exact path="/events/newEvent">
+            <EventForm />
         </Route>
         <Route exact path="/decks/edit/:deckId(\d+)">
             <DeckForm editDeck = {true}/>
