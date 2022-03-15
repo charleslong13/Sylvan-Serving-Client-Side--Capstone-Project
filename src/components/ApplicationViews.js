@@ -5,6 +5,7 @@ import { DeckForm } from "./deck/DeckForm"
 import { DeckList } from "./deck/DeckList"
 import { MyDecks } from "./deck/MyDecks"
 import {Home} from "./home/home"
+import { PlayerDetails } from "./players/PlayerDetails"
 export const ApplicationViews = () => {
     return <>
     <main style={{
@@ -28,6 +29,9 @@ export const ApplicationViews = () => {
         </Route>
         <Route exact path='/decks/:deckId(\d+)'>
 				<DeckDetails />
+			</Route>
+        <Route exact path='/players/:playerId(\d+)'>
+				<PlayerDetails />
 			</Route>
     </main>
     </>

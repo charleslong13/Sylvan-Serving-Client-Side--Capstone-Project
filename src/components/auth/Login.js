@@ -16,7 +16,8 @@ export const Login = () => {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-                "Accept": "application/json"
+                "Accept": "application/json",
+                
             },
             body: JSON.stringify({
                 username: username.current.value,
@@ -28,7 +29,7 @@ export const Login = () => {
                 if ("valid" in res && res.valid && "token" in res) {
                     localStorage.setItem("ss_token", res.token)
                     //added line below to store the playerId in local storage so we can reference to get the current user 
-                    localStorage.set("playerId", res.id)
+                    localStorage.setItem("playerId", res.id)
                     history.push("/")
                 }
                 else {

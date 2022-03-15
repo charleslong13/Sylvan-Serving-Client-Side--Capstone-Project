@@ -1,13 +1,10 @@
 import React, { useEffect, useState } from "react"
-import { useHistory } from 'react-router-dom'
 import { getDecks } from "./DeckManager"
 import { Link } from "react-router-dom"
 
 export const DeckList = () => {
     const [decks, setDecks] = useState([])
   
-
-    const history = useHistory()
     useEffect(() => {
         getDecks().then(data => setDecks(data))
     }, [])
@@ -21,7 +18,9 @@ export const DeckList = () => {
                         return <section key={`deck--${deck.id}`} className="deck">
                             <ol>
                             <Link to={`/decks/${deck.id}`}>{deck.title} </Link>
-                            <div className="deckAuthor">Created by: {deck.player?.user.username}</div>
+                            <p></p>
+                            <Link to={`/players/${deck.player?.id}`}> By {deck.player?.user.username}</Link> 
+                            {/* <div className="deckAuthor">Created by: {deck.player?.user.username}</div> */}
                             <div className="playStyle">Play style: {deck.playStyle.label}</div>
                             <img className="commander_image" src={deck.commander} alt="commander_image" />
                             </ol>

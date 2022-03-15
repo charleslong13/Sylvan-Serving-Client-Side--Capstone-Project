@@ -24,7 +24,8 @@ export const DeckDetails = () => {
             <div className="decks"></div>
                             <div className="completedDeckList"><div key={`deckDetails.id-${deckDetails.id}`}>
                             <Link to={`/decks/${deckDetails.id}`}>{deckDetails.title} </Link>
-                            <div className="deckAuthor">by {deckDetails.player?.user.username}</div> 
+                            <p></p>
+                            <Link to={`/players/${deckDetails.player?.id}`}> by {deckDetails.player?.user.username}</Link> 
                             <div className="playStyle">Play style: {deckDetails.playStyle?.label}</div>
                             <img className="commander_image" src={deckDetails.commander} alt="commander_image" />
                             <b><div className="deckList">Creatures:</div></b>
@@ -58,15 +59,7 @@ export const DeckDetails = () => {
                             <div className="deckList">{deckDetails.primer}</div>
                             </div>
                             </div>
-                            <p></p>
-                            <p></p>
-                            <p></p>
-                            <p></p>
-                            <p></p>
-                            <p></p>
-                            <p></p>
-                            <p></p>
-                            <p></p>
+                            
         </>
     )
 }
