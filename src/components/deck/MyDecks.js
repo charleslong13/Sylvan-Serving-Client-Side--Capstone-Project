@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import { deleteDeck, getDeckByCurrentPlayer } from "./DeckManager"
+import { deleteDeck, getDeckByCurrentPlayer, getMyDecks } from "./DeckManager"
 import { Link } from "react-router-dom"
 import { getThisPlayer } from "../players/playerManager"
 import "./decks.css"
@@ -16,27 +16,17 @@ export const MyDecks = () => {
 
 
 	useEffect(() => {
-        
-		const playerId = localStorage["playerId"]
-        
-		getThisPlayer(playerId).then((player) => {
-            setIsLoading(false)
-			setCurrentPlayer(player)
-		})
-	}, [])
-
-	useEffect(() => {
 		// Query string parameter
-        if (currentPlayer.id) {
-		const playerId = currentPlayer.id
-		getDeckByCurrentPlayer(playerId).then((deck) => {
-            // setDeck(deck)
+        
+		getDeckByCurrentPlayer(parseInt(localStorage["playerId"])).then((deck) => {
             setIsLoading(false)
-			setFoundDeck(deck.filter(deck1 => deck1["player"]["id"] === parseInt(playerId)))
-		})}
+			setFoundDeck(deck)
+        })
 	}, [currentPlayer])
 	
 if(isLoading) return <>Loading data...</>
+
+
 
     return (
         //  <> Fragment puts all return elements into one JXS element 
@@ -62,9 +52,9 @@ if(isLoading) return <>Loading data...</>
                             <button type="button" className="button" onClick={() => {
                                let text
                                if (window.confirm("Are you sure you want to delete this deck?") === true) {
-                                   deleteDeck(completedDecks.id).then(() => history.push("/deckfeed"));}
+                                   deleteDeck(completedDecks.id).then(() => getDeckByCurrentPlayer(parseInt(localStorage.getItem("playerId"))).then(setFoundDeck));}
                                    else {text = "You canceled!"}
-                                   
+                                
                                }}>Delete</button>
                             <button type="button" className="button" onClick={() => {
                                 history.push(`/decks/edit/${completedDecks.id}`)}
