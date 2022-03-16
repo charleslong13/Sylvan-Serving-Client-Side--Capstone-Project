@@ -60,3 +60,21 @@ export const updateEvent = (id, event) => {
     })
         .then(getEvents)
 }
+export const joinEvent = (eventId) => {
+    return fetch(`http://localhost:8000/events/${eventId}/signup`, {
+      method: "POST",
+      headers: {
+        "Authorization": `Token ${localStorage.getItem("ss_token")}`,
+      },
+    }).then(res => res.json())
+  }
+  
+  export const leaveEvent = (eventId) => {
+    return fetch(`http://localhost:8000/events/${eventId}/leave`, {
+      method: "Delete",
+      headers: {
+        "Authorization": `Token ${localStorage.getItem("ss_token")}`,
+      },
+    })
+  }
+  

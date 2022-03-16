@@ -37,6 +37,9 @@ export const ApplicationViews = () => {
         <Route exact path="/decks/edit/:deckId(\d+)">
             <DeckForm editDeck = {true}/>
         </Route>
+        <Route exact path="/events/edit/:eventId(\d+)">
+            <EventForm editEvent = {true}/>
+        </Route>
         <Route exact path='/decks/:deckId(\d+)'>
 				<DeckDetails />
 			</Route>

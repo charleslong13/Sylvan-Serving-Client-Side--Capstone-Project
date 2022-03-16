@@ -15,7 +15,8 @@ export const EventForm = ({ editEvent }) => {
         time: "",
         venue: "",
         address: "",
-        description: ""
+        description: "",
+        organizer: ""
     })
 
 
@@ -28,7 +29,8 @@ export const EventForm = ({ editEvent }) => {
                     time: res.time,
                     venue: res.venue,
                     address: res.address,
-                    description: res.description
+                    description: res.description,
+                    organizer: res.organizer
                 }
                 setCurrentEvent(eventEdit)
             })
@@ -142,7 +144,8 @@ export const EventForm = ({ editEvent }) => {
                         time: currentEvent.time,
                         venue: currentEvent.venue,
                         address: currentEvent.address,
-                        description: currentEvent.description
+                        description: currentEvent.description,
+                        organizer: localStorage.getItem("playerId")
                     }
                     editEvent
                         ? updateEvent(eventId, event)
