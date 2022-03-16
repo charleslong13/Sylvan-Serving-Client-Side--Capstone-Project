@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react"
-import { deleteDeck, getDeckByCurrentPlayer, getMyDecks } from "./DeckManager"
+import { deleteDeck, getDeckByCurrentPlayer } from "./DeckManager"
 import { Link } from "react-router-dom"
-import { getThisPlayer } from "../players/playerManager"
 import "./decks.css"
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min"
 

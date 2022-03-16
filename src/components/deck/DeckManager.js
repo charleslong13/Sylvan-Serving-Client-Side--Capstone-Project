@@ -17,16 +17,7 @@ export const getDecks = () => {
     })
         .then(response => response.json())
 }
-export const getMyDecks = () => {
-    return fetch("http://localhost:8000/decks", {
-        headers:{
-            "Authorization": `Token ${localStorage.getItem("ss_token")}`
-        }
-    })
-        .then((getDeckByCurrentPlayer(parseInt(localStorage.getItem("playerId"))).then((deck) => {
-            return (deck.filter(deck1 => deck1["player"]["id"] === parseInt(localStorage.getItem("playerId"))))})))
-        .then(response => response.json())
-}
+
 
 export const getDeck= (id) => {
     return fetch(`http://localhost:8000/decks/${id}`, {
