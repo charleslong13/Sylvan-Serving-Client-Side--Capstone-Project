@@ -24,7 +24,7 @@ export const EventList = () => {
     return (
         <>
             <i><b><center><h2>Events</h2></center></b></i>
-            <center><button type="button" className="btt" onClick={() => {
+            <center><button type="button" class="btn btn-primary"onClick={() => {
                 history.push(`/events/newEvent`)
             }
             }>Create New Event</button></center>
@@ -50,19 +50,18 @@ export const EventList = () => {
                                     }
                                     )
                                 }
-
                                 </div>
                                 {event.organizer?.id === parseInt(localStorage.getItem("playerId")) ?
-                                    <button onClick={() => history.push(`/events/edit/${event.id}`)}>Edit</button>
+                                    <button  type="button" className="btn btn-primary"onClick={() => history.push(`/events/edit/${event.id}`)}>Edit</button>
                                     : ""}
                                 {event.organizer?.id === parseInt(localStorage.getItem("playerId")) ?
-                                    <button onClick={() => { deleteEvent(event.id).then(setEvents) }}>Delete</button>
+                                    <button type="button" className="btn btn-primary" onClick={() => { deleteEvent(event.id).then(setEvents) }}>Delete</button>
                                     : ""}
                                 {
                                     event.joined
                                         ?
                                         // Leave button
-                                        <button onClick={() => {
+                                        <button type="button" className="btn btn-primary" onClick={() => {
                                             leaveEvent(event.id).then((window.confirm("Are you sure you want to cancel your RSVP?")? refreshPage() : "")
                                             // .then(refreshPage())
                                             )}}>
@@ -70,7 +69,7 @@ export const EventList = () => {
                                         </button>
                                         :
                                         // join button
-                                        <button onClick={() => {
+                                        <button type="button" className="btn btn-primary" onClick={() => {
                                             joinEvent(event.id).then((window.confirm("Are you sure you want to RSVP?")? refreshPage() : "")
                                             // .then(refreshPage())
                                             )}}>

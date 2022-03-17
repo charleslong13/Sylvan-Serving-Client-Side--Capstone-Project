@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 import { useHistory } from "react-router-dom"
 import { useParams } from "react-router-dom/cjs/react-router-dom.min"
 import { createDeck, getDeckById, getPlayStyle, updateDeck } from "./DeckManager"
-
+import "./decks.css"
 
 
 export const DeckForm = ({ editDeck }) => {
