@@ -3,13 +3,15 @@ Server-side Capstone Project "Sylvan Serving": The purpose of this application i
 Currently in progress for my final Capstone Project (Due March 25th)
 
 
-Client-side: https://github.com/charleslong13/Sylvan-Serving-Server-Side---Capstone
+Server-side: https://github.com/charleslong13/Sylvan-Serving-Server-Side---Capstone
+- Project Board and Issue tickets on server-side github repo
 
 Wireframe:
 https://pr.to/93XCDO/
 
 ERD:
 https://dbdiagram.io/d/6226470861d06e6eadba3d3b
+
 
 
 # Getting Started with Create React App
