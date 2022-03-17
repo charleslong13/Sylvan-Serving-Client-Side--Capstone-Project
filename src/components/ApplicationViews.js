@@ -8,6 +8,7 @@ import { EventForm } from "./events/EventForm"
 import { EventList } from "./events/EventList"
 import {Home} from "./home/home"
 import { PlayerDetails } from "./players/PlayerDetails"
+import { Rules } from "./rules/rules"
 
 
 export const ApplicationViews = () => {
@@ -21,6 +22,9 @@ export const ApplicationViews = () => {
         </Route>
         <Route exact path="/deckfeed">
             <DeckList />
+        </Route>
+        <Route exact path="/info">
+            <Rules />
         </Route>
         <Route exact path="/MyDeckList">
             <MyDecks />

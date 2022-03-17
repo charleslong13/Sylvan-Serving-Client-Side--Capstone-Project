@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { deleteDeck, getDeckByCurrentPlayer, getMyDecks } from "./DeckManager"
 import { Link } from "react-router-dom"
-import { getThisPlayer } from "../players/playerManager"
 import "./decks.css"
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min"
 
@@ -32,7 +31,7 @@ if(isLoading) return <>Loading data...</>
         //  <> Fragment puts all return elements into one JXS element 
         <>
 
-            <div className="decks"></div>
+<div className="card-body"style={{backgroundColor:'#79d9ab'}}>
             {
                 foundDeck.map(
                     (completedDecks) => {
@@ -49,14 +48,14 @@ if(isLoading) return <>Loading data...</>
                             <p></p>
                             <b><div className="deckList">Primer:</div></b>
                             <div className="deckList">{completedDecks.primer}</div>
-                            <button type="button" className="button" onClick={() => {
+                            <button type="button" className="btn btn-primary" onClick={() => {
                                let text
                                if (window.confirm("Are you sure you want to delete this deck?") === true) {
                                    deleteDeck(completedDecks.id).then(() => getDeckByCurrentPlayer(parseInt(localStorage.getItem("playerId"))).then(setFoundDeck));}
                                    else {text = "You canceled!"}
                                 
                                }}>Delete</button>
-                            <button type="button" className="button" onClick={() => {
+                            <button type="button" className="btn btn-primary" onClick={() => {
                                 history.push(`/decks/edit/${completedDecks.id}`)}
                             }>Edit</button>
                             </div>
@@ -74,7 +73,7 @@ if(isLoading) return <>Loading data...</>
                         : <div> none </div>
                     } 
                 )
-            }
+            } </div>
         </>
     )
 }

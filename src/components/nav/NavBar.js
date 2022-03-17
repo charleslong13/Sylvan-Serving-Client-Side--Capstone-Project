@@ -5,10 +5,11 @@ import "./NavBar.css"
 export const NavBar = () => {
     const history = useHistory()
     return (
-        <ul className="navbar">
-            <li className="navbar__item">
-                <Link className="navbar_item" to="/">Home</Link>
-            </li>
+        <nav className="navbar navbar-expand-lg" style={{
+            backgroundColor:`#90e0b9`}}>
+            <a className="navbar-brand" href="/">SylvanServing</a>
+           <ul className="navbar-item"></ul>
+            
             <li className="navbar__item">
                 <Link className="navbar_item" to="/deckfeed">Deck List Feed</Link>
             </li>
@@ -28,7 +29,7 @@ export const NavBar = () => {
             {
                 (localStorage.getItem("ss_token") !== null) ?
                     
-                        <button className="nav-link fakeLink"
+                        <button  type="button" className="btn btn-dark"
                             onClick={() => {
                                 localStorage.removeItem("ss_token")
                                 history.push({ pathname: "/" })
@@ -43,6 +44,6 @@ export const NavBar = () => {
                             <Link className="nav-link" to="/register">Register</Link>
                         </li>
                     </>
-            }        </ul>
+            }        </nav>
     )
 }
