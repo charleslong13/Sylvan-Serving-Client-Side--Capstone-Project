@@ -1,3 +1,17 @@
+Server-side Capstone Project "Sylvan Serving": The purpose of this application is a Magic the Gathering companion application that can be used to connect with other players, improve your deck building skills, keep track of your deck collections, and create game night events so people can get together to play! Utilizing React, Django, JSX, CSS.
+
+Currently in progress for my final Capstone Project (Due March 25th)
+
+
+Client-side: https://github.com/charleslong13/Sylvan-Serving-Server-Side---Capstone
+
+Wireframe:
+https://pr.to/93XCDO/
+
+ERD:
+https://dbdiagram.io/d/6226470861d06e6eadba3d3b
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
