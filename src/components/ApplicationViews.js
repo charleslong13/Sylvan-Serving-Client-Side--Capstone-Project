@@ -1,5 +1,6 @@
 import React from "react"
 import {Route} from "react-router-dom"
+import { CommentForm } from "./comments/commentForm"
 import { DeckDetails } from "./deck/DeckDetails"
 import { DeckForm } from "./deck/DeckForm"
 import { DeckList } from "./deck/DeckList"
@@ -34,6 +35,9 @@ export const ApplicationViews = () => {
         </Route>
         <Route exact path="/events">
             <EventList />
+        </Route>
+        <Route exact path="/comments/:deckId(\d+)">
+            <CommentForm />
         </Route>
         <Route exact path="/events/newEvent">
             <EventForm />

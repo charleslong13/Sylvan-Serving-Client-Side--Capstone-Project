@@ -29,7 +29,7 @@ export const NavBar = () => {
             {
                 (localStorage.getItem("ss_token") !== null) ?
                     
-                        <button  type="button" className="btn btn-dark"
+                        <button  type="button" className="btn btn-primary"
                             onClick={() => {
                                 localStorage.removeItem("ss_token")
                                 history.push({ pathname: "/" })

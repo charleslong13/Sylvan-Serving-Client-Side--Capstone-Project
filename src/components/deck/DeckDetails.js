@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react"
 import { Link, useParams } from "react-router-dom"
+import { CommentList } from "../comments/commentList"
 import { getDeckById } from "./DeckManager"
 import "./decks.css"
+
 
 export const DeckDetails = () => {
 	const [deckDetails, setDeckDetails] = useState([])
@@ -20,9 +22,9 @@ export const DeckDetails = () => {
     return (
         //  <> Fragment puts all return elements into one JXS element 
         <>
-
+            
             <div className="decks"></div>
-                            <div className="completedDeckList"><div key={`deckDetails.id-${deckDetails.id}`}>
+                           <center> <div className="completedDeckList"><div key={`deckDetails.id-${deckDetails.id}`}>
                             <Link to={`/decks/${deckDetails.id}`}>{deckDetails.title} </Link>
                             <p></p>
                             <Link to={`/players/${deckDetails.player?.id}`}> by {deckDetails.player?.user.username}</Link> 
@@ -58,8 +60,22 @@ export const DeckDetails = () => {
                             <b><div className="deckList">Primer:</div></b>
                             <div className="deckList">{deckDetails.primer}</div>
                             </div>
+                            <p></p>
+                            <div className='control'>
+											<Link
+												className='button is-link is-dark'
+												to={`/comments/${deckId}`}>
+												Add Comment
+											</Link>
+										</div>
+                            </div></center>
+                            <p></p><p></p>
+
+                            <div className="card " >
+                                Comments:
+                                
+                                <CommentList />
                             </div>
-                            
         </>
     )
 }
