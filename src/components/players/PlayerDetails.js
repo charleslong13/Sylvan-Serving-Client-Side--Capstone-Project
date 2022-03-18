@@ -30,6 +30,7 @@ export const PlayerDetails = () => {
     if (isLoading) return <>Loading data...</>
     return (
         <>
+        <center><h2>Player Details</h2></center>
             <div className="playerDetail"></div>
             <div key={`playerDetails.id-${playerDetails.id}`} className="player">
                 <center><b><div>Username: </div></b>
@@ -37,6 +38,8 @@ export const PlayerDetails = () => {
                     <b><div>Bio: </div></b>
                     <div>{playerDetails.bio}</div></center>
                 <p></p><p></p><p></p>
+                <div></div>
+                <center><h3>{playerDetails.user?.username}'s decks</h3></center>
                 {
                     foundDeck.map(
                         (completedDecks) => {
