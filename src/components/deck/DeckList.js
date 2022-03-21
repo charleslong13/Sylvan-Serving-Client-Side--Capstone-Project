@@ -29,16 +29,15 @@ export const DeckList = () => {
     return (
         <>
             <i><b><center><h1>Deck List Feed</h1></center></b></i>
-            <div className="container">
-                <div className="row align-items-start ">
-                    <div className="col col-sm-1 p-1 "style={{backgroundColor:'#79d9ab'}}>
-                        Click on a deck title or a username to view deck details
-                    </div>
+            <div className="pure-g">
+                
+                    <div className="pure-u-1-4 "style={{backgroundColor:'#79d9ab'}}>
+                        Click on a title or username for deck details
+                    </div> 
 
-
-                        <div className="card col-xl"style={{backgroundColor:'#184D47'}}>
-                            <div className="card-body" style={{backgroundColor:'#79d9ab'}}>
-                    <div className="deckFilter">
+                        <div className="pure-u-1-2"style={{backgroundColor:'#79d9ab'}}>
+                            <div className="card" style={{backgroundColor:'#2e8b57'}}>
+                    <center><div className="deckFilter">
                         <select id="playStyle" onChange={(event) => {
                             deckFilter(event)
                         }}
@@ -48,34 +47,30 @@ export const DeckList = () => {
                             <option value='0'>Filter by Play Style</option>
                             {playStyle.map((playStyle) => (
                             <option key={playStyle?.id} value={playStyle?.id}>{playStyle?.label}</option>))}
-                        </select>
-                    </div>
+                        </select> 
+                    </div></center>
                                 {
                                     decks.map(deck => {
                                         return <section key={`deck--${deck.id}`} className="deck">
                                            <center> 
-                                                <Link to={`/decks/${deck.id}`}>{deck.title} </Link>
+                                               <pre>
+                                                <Link to={`/decks/${deck.id}`}>{deck.title}</Link>
                                                 <Link to={`/players/${deck.player?.id}`}> by {deck.player?.user.username}</Link>
-                                                <div className="playStyle">Play style: {deck.playStyle.label}</div>
+                                                <div className="playStyle">Play style:{deck.playStyle.label}</div>
                                                 <img className="card-img-top" className="commander_image" src={deck.commander} alt="commander_image" />
-                                                </center> 
+                                                </pre></center> 
                                         </section>
                                     })
                                 }
                             </div>
                             </div>
-                            <div className="col col-sm-1 p-2"style={{backgroundColor:'#79d9ab'}}>
-                                View the Current Meta!
+                            <div className="pure-u-1-4"style={{backgroundColor:'#79d9ab'}}>
+                                View what decks other players are making!              
                             </div>
                             </div>
-                            </div>
+                            
 
         </>
     )
 }
 
-{/* <div class="container">
-  <div class="row align-items-start">
-    <div class="col">
-      One of three columns
-    </div> */}

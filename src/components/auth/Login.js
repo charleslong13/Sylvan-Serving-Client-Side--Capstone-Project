@@ -39,21 +39,21 @@ export const Login = () => {
     }
 
     return (
-        <main className="container--login">
+        <main className="container--login" >
             <dialog className="dialog dialog--auth" ref={invalidDialog}>
                 <div>Username or password was not valid.</div>
                 <button className="button--close" onClick={e => invalidDialog.current.close()}>Close</button>
             </dialog>
             <section>
                 <form className="form--login" onSubmit={handleLogin}>
-                    <h1>Sylvan Serving</h1>
-                    <h2>Please sign in</h2>
+                    <b><i><h1 style={{color:'#8B0000', fontSize:'60px'}}>Sylvan Serving</h1></i></b>
+                    <b><h2 style={{color:'#8B0000', fontSize: '25px'}}>Please sign in</h2></b>
                     <fieldset>
-                        <label htmlFor="inputUsername"> Username </label>
+                        <label htmlFor="inputUsername" style={{color:'black'}}> Username </label>
                         <input ref={username} type="username" id="username" className="form-control" placeholder="Username address" required autoFocus />
                     </fieldset>
                     <fieldset>
-                        <label htmlFor="inputPassword"> Password </label>
+                        <label htmlFor="inputPassword" style={{color:'black'}}> Password </label>
                         <input ref={password} type="password" id="password" className="form-control" placeholder="Password" required />
                     </fieldset>
                     <fieldset style={{

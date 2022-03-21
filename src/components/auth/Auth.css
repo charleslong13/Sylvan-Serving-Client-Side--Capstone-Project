@@ -51,12 +51,20 @@ fieldset {
 }
 
 .form--login {
-    background-size: contain;
+    background-size:100%;
     background-position-x: center;
     background-image: url('/home/charleslong13/workspace/sylvanserving-client/src/components/auth/Free-Mtg-Backgrounds-Download.jpg');
     z-index: 1;
-    /* min-height: 25rem;
-    min-width: 45rem; */
+    padding: 12rem 35rem;
+    background-color: black;
+    background-blend-mode: normal;
+    background-repeat: no-repeat;
+}
+.form--login1 {
+    background-size:auto;
+    background-position-x: center;
+    background-image: url('/home/charleslong13/workspace/sylvanserving-client/src/components/auth/Free-Mtg-Backgrounds-Download.jpg');
+    z-index: 1;
     padding: 12rem 35rem;
     background-color: black;
     background-blend-mode: normal;

@@ -50,45 +50,45 @@ export const Register = () => {
         <main style={{ textAlign: "center" }}>
 
             <dialog className="dialog dialog--password" ref={passwordDialog}>
-                <div>Passwords do not match</div>
+                <div >Passwords do not match</div>
                 <button className="button--close" onClick={e => passwordDialog.current.close()}>Close</button>
             </dialog>
 
-            <form className="form--login" onSubmit={handleRegister}>
-                <h1 className="h3 mb-3 font-weight-normal">Register an account</h1>
+            <form className="form--login1" onSubmit={handleRegister}>
+                <h1 className="h3 mb-3 font-weight-normal" style={{color:'black'}}>Register an account</h1>
                 <fieldset>
-                    <label htmlFor="firstName"> First Name </label>
-                    <input ref={firstName} type="text" name="firstName" className="form-control" placeholder="First name" required autoFocus />
+                    <label htmlFor="firstName" style={{color:'black'}}> First Name </label>
+                    <input ref={firstName} type="text" name="firstName" className="form-control"  placeholder="First name" required autoFocus />
                 </fieldset>
                 <fieldset>
-                    <label htmlFor="lastName"> Last Name </label>
+                    <label htmlFor="lastName"style={{color:'black'}}> Last Name </label>
                     <input ref={lastName} type="text" name="lastName" className="form-control" placeholder="Last name" required />
                 </fieldset>
                 <fieldset>
-                    <label htmlFor="inputUsername">Username</label>
+                    <label htmlFor="inputUsername"style={{color:'black'}}>Username</label>
                     <input ref={username} type="text" name="username" className="form-control" placeholder="Username" required />
                 </fieldset>
                 <fieldset>
-                    <label htmlFor="inputPassword"> Password </label>
+                    <label htmlFor="inputPassword"style={{color:'black'}}> Password </label>
                     <input ref={password} type="password" name="password" className="form-control" placeholder="Password" required />
                 </fieldset>
                 <fieldset>
-                    <label htmlFor="verifyPassword"> Verify Password </label>
+                    <label htmlFor="verifyPassword"style={{color:'black'}}> Verify Password </label>
                     <input ref={verifyPassword} type="password" name="verifyPassword" className="form-control" placeholder="Verify password" required />
                 </fieldset>
                 <fieldset>
-                    <label htmlFor="bio"> Bio </label>
+                    <label htmlFor="bio"style={{color:'black'}}> Bio </label>
                     <textarea ref={bio} name="bio" className="form-control" placeholder="Let other gamers know a little bit about you..." />
                 </fieldset>
                 <fieldset style={{
                     textAlign: "center"
                 }}>
-                    <button className="btn btn-1 btn-sep icon-send" type="submit">Register</button>
+                    <button className="pure-button" type="submit">Register</button>
                 </fieldset>
-            </form>
-            {/* <section className="link--register">
+            <section className="link--register">
                 Already registered? <Link to="/login">Login</Link>
-            </section> */}
+            </section>
+            </form>
         </main>
     )
 }

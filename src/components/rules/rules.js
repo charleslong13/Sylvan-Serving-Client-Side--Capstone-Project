@@ -9,7 +9,7 @@ export const Rules = () => {
                     <i>Commander Rules and General Information</i>
                 </h1>
                 <div className="aboutUsBody">
-                    <div className="card w-50 h-50" style={{backgroundColor:'#5CDB95'}} >
+                    <div className="card w-50 h-50" style={{backgroundColor:'#2e8b57'}} >
                         <img className="card-img-top" src="https://images.unsplash.com/photo-1529651795107-e5a141e34843?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Card image cap"></img>
                         <div className="card-body">
                             <i><h4 className="card-title">Your home for rules and information</h4></i>
@@ -45,7 +45,7 @@ export const Rules = () => {
                             <u><h5>Philosophy of Commander</h5></u>
                             <p></p>
                             <div style={{ textAlign: "left"}}>
-                            Commander is for fun. It’s a socially interactive, multiplayer Magic: the Gathering format full of wild interactions and epic plays, specifically designed as an alternative to tournament Magic. As is fitting for a format in which you choose an avatar to lead your forces into battle, Commander focuses on a resonant experience. Each game is a journey the players share, relying on a social contract in which each player is considerate of the experiences of everyone involved–this promotes player interaction, inter-game variance, a variety of play styles, and a positive communal atmosphere. At the end of an ideal Commander game, someone will have won, but all participants will have had the opportunity to express themselves through their deck building and game play.
+                            Commander is for fun. It's a socially interactive, multiplayer Magic: the Gathering format full of wild interactions and epic plays, specifically designed as an alternative to tournament Magic. As is fitting for a format in which you choose an avatar to lead your forces into battle, Commander focuses on a resonant experience. Each game is a journey the players share, relying on a social contract in which each player is considerate of the experiences of everyone involved–this promotes player interaction, inter-game variance, a variety of play styles, and a positive communal atmosphere. At the end of an ideal Commander game, someone will have won, but all participants will have had the opportunity to express themselves through their deck building and game play.
                             </div>
 
                             
