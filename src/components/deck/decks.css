@@ -17,3 +17,12 @@
     /* text-align: left; */
     
 }
+
+.card {
+    overflow: hidden;
+    box-shadow: 0 2px 20px #5CDB95;
+    border-radius: 25px;
+    padding: 20px;
+    width: auto;
+    height: auto;
+}

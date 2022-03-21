@@ -42,5 +42,13 @@
   } */
 
   * {
-    color:#05386B;
-   }
+    color: rgb(2, 22, 2);
+    font-family:garamond;
+    font-size: 18px;
+  }
+
+  i {
+    font-size: 35px;
+  }
+  
+  

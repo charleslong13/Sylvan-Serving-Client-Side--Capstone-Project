@@ -48,14 +48,14 @@ if(isLoading) return <>Loading data...</>
                             <p></p>
                             <b><div className="deckList">Primer:</div></b>
                             <div className="deckList">{completedDecks.primer}</div>
-                            <button type="button" className="btn btn-primary" onClick={() => {
+                            <button type="button" className="pure-button" onClick={() => {
                                let text
                                if (window.confirm("Are you sure you want to delete this deck?") === true) {
                                    deleteDeck(completedDecks.id).then(() => getDeckByCurrentPlayer(parseInt(localStorage.getItem("playerId"))).then(setFoundDeck));}
                                    else {text = "You canceled!"}
                                 
                                }}>Delete</button>
-                            <button type="button" className="btn btn-primary" onClick={() => {
+                            <button type="button" className="pure-button" onClick={() => {
                                 history.push(`/decks/edit/${completedDecks.id}`)}
                             }>Edit</button>
                             </div>

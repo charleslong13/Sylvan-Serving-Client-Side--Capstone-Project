@@ -5,17 +5,13 @@ import { deleteEvent, getEvents, joinEvent, leaveEvent } from "./EventManager"
 
 export const EventList = () => {
     const [events, setEvents] = useState([])
-    // const [attendees, setAttendees] = useState([])
+    
     const history = useHistory()
     useEffect(() => {
         getEvents().then(data => setEvents(data))
     }, [])
 
-    // let attendees = events.attendees?.user.id
-    //     useEffect(() => {
-    //     getEvents().then(data => setEvents(data))
-        
-    //     }, [attendees])
+    
 
     function refreshPage() {
         window.location.reload(false);
@@ -23,8 +19,8 @@ export const EventList = () => {
 
     return (
         <>
-            <i><b><center><h2>Events</h2></center></b></i>
-            <center><button type="button" class="btn btn-primary"onClick={() => {
+            <i><b><center><h1>Events</h1></center></b></i>
+            <center><button type="button" className="pure-button" onClick={() => {
                 history.push(`/events/newEvent`)
             }
             }>Create New Event</button></center>
@@ -51,17 +47,18 @@ export const EventList = () => {
                                     )
                                 }
                                 </div>
+                                <div className="pure-button-group" role="group">
                                 {event.organizer?.id === parseInt(localStorage.getItem("playerId")) ?
-                                    <button  type="button" className="btn btn-primary"onClick={() => history.push(`/events/edit/${event.id}`)}>Edit</button>
+                                    <button  type="button" className="pure-button"onClick={() => history.push(`/events/edit/${event.id}`)}>Edit</button>
                                     : ""}
                                 {event.organizer?.id === parseInt(localStorage.getItem("playerId")) ?
-                                    <button type="button" className="btn btn-primary" onClick={() => { deleteEvent(event.id).then(setEvents) }}>Delete</button>
+                                    <button type="button" className="pure-button" onClick={() => { deleteEvent(event.id).then(setEvents) }}>Delete</button>
                                     : ""}
                                 {
                                     event.joined
                                         ?
                                         // Leave button
-                                        <button type="button" className="btn btn-primary" onClick={() => {
+                                        <button type="button" className="pure-button" onClick={() => {
                                             leaveEvent(event.id).then((window.confirm("Are you sure you want to cancel your RSVP?")? refreshPage() : "")
                                             // .then(refreshPage())
                                             )}}>
@@ -69,7 +66,7 @@ export const EventList = () => {
                                         </button>
                                         :
                                         // join button
-                                        <button type="button" className="btn btn-primary" onClick={() => {
+                                        <button type="button" className="pure-button" onClick={() => {
                                             joinEvent(event.id).then((window.confirm("Are you sure you want to RSVP?")? refreshPage() : "")
                                             // .then(refreshPage())
                                             )}}>
@@ -79,7 +76,7 @@ export const EventList = () => {
                                 <p></p>
                                 <p></p>
                                 <p></p>
-                                <p></p>
+                                <p></p></div>
                             </ol>
                         </section>
                     })

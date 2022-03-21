@@ -71,9 +71,9 @@ export const DeckDetails = () => {
                             </div></center>
                             <p></p><p></p>
 
-                            <div className="card " >
+                            <div className="card" style={{background: "#2e8b57"}} >
                                 Comments:
-                                
+
                                 <CommentList />
                             </div>
         </>

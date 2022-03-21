@@ -273,7 +273,7 @@ export const DeckForm = ({ editDeck }) => {
                         : createDeck(deck)
                             .then(() => history.push("/MyDeckList"))
                 }}
-                className="btn btn-primary">{editDeck ? "Update Deck" : "Create Deck"} </button>
+                className="pure-button">{editDeck ? "Update Deck" : "Create Deck"} </button>
         </form>
     )
 }
