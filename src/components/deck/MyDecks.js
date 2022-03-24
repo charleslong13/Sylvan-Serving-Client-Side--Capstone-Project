@@ -47,7 +47,7 @@ if(isLoading) return <>Loading data...</>
                             <div className="deckList">{completedDecks.powerLevel}</div>
                             <p></p>
                             <b><div className="deckList">Primer:</div></b>
-                            <div className="deckList">{completedDecks.primer}</div>
+                            <div className="deckList1">{completedDecks.primer}</div>
                             <button type="button" className="pure-button" onClick={() => {
                                let text
                                if (window.confirm("Are you sure you want to delete this deck?") === true) {

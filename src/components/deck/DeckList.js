@@ -33,7 +33,7 @@ export const DeckList = () => {
                 
                     <div className="pure-u-1-4 "style={{backgroundColor:'#79d9ab'}}>
                         Click on a title or username for more details
-                    <center><img src="https://res.cloudinary.com/dh0gsmquh/image/upload/v1648144095/Free-HD-Mtg-Photos-Download-768x480_pkz4or.jpg" alt="" style={{maxHeight:'500px', maxWidth:'300px', borderRadius:'5px'}}></img></center>
+                    <center><img src="https://res.cloudinary.com/dh0gsmquh/image/upload/v1648144095/Free-HD-Mtg-Photos-Download-768x480_pkz4or.jpg" alt="" style={{ maxWidth:'100%', borderRadius:'5px'}}></img></center>
                     </div> 
 
                         <div className="pure-u-1-2"style={{backgroundColor:'#79d9ab'}}>
@@ -58,7 +58,7 @@ export const DeckList = () => {
                                                 <Link to={`/decks/${deck.id}`}>{deck.title}</Link>
                                                 <Link to={`/players/${deck.player?.id}`}> by {deck.player?.user.username}</Link>
                                                 <div className="playStyle">Play style:{deck.playStyle.label}</div>
-                                                <img className="card-img-top" className="commander_image" src={deck.commander} alt="commander_image" />
+                                                <img className="card-img-top" src={deck.commander} alt="commander_image" />
                                                 </pre></center> 
                                         </section>
                                     })
@@ -67,7 +67,7 @@ export const DeckList = () => {
                             </div>
                             <div className="pure-u-1-4"style={{backgroundColor:'#79d9ab'}}>
                                 View what decks other players are making!          
-                                <center><img src="https://res.cloudinary.com/dh0gsmquh/image/upload/v1648144168/Free-Mtg-Backgrounds-768x480_nnjfn6.jpg" alt="" style={{maxHeight:'500px', maxWidth:'300px', borderRadius:'5px'}}></img></center>    
+                                <center><img src="https://res.cloudinary.com/dh0gsmquh/image/upload/v1648144168/Free-Mtg-Backgrounds-768x480_nnjfn6.jpg" alt="" style={{ maxWidth:'100%', borderRadius:'5px'}}></img></center>    
                             </div>
                             </div>
                             

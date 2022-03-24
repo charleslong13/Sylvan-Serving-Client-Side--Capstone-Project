@@ -11,7 +11,8 @@ export const CommentList = () => {
 		getCommentsByDeckId(deckId).then(setComments)
 	}, [])
 
-   
+
+	
 	return (
 		<>
        

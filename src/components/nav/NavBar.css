@@ -2,6 +2,9 @@
     display: flex;
     flex-wrap: nowrap;
     justify-content: left;
+    max-width: 100%;
+    min-width: 300px;
+    height: auto;
 }
 
 
@@ -20,4 +23,25 @@
 
 .home_link {
   font-family:'Amita';
+}
+
+@media screen and (max-width: 600px) {
+  .pure-menu-horizontal a:not(:first-child) {display: none;}
+  .pure-menu-horizontal a.icon {
+    float: right;
+    display: block;
+  }
+}
+@media screen and (max-width: 600px) {
+  .pure-menu-horizontal.responsive {position: relative;}
+  .pure-menu-horizontal.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .pure-menu-horizontal.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
 }
