@@ -10,7 +10,7 @@ import { EventList } from "./events/EventList"
 import {Home} from "./home/home"
 import { PlayerDetails } from "./players/PlayerDetails"
 import { Rules } from "./rules/rules"
-
+import {Inspiration} from "./randomImage/inspiration"
 
 export const ApplicationViews = () => {
     return <>
@@ -26,6 +26,9 @@ export const ApplicationViews = () => {
         </Route>
         <Route exact path="/info">
             <Rules />
+        </Route>
+        <Route exact path="/inspiration">
+            <Inspiration />
         </Route>
         <Route exact path="/MyDeckList">
             <MyDecks />

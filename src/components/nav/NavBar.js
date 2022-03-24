@@ -10,7 +10,7 @@ export const NavBar = () => {
             
     <ul className="pure-menu-list">
         <li className="pure-menu-item pure-menu-selected">
-            <a className="home_link"href="/" className="pure-menu-link" style={{fontFamily: "Amita"}}>Sylvan Serving</a>
+            <a href="/" className="pure-menu-link" style={{fontFamily: "Amita"}}>Sylvan Serving</a>
         </li>
         <li className="pure-menu-item pure-menu-selected">
             <a href="/deckfeed" className="pure-menu-link">Deck List Feed</a>
@@ -26,6 +26,9 @@ export const NavBar = () => {
         </li>
         <li className="pure-menu-item pure-menu-selected">
             <a href="/info" className="pure-menu-link">Rules and Info</a>
+        </li>
+        <li className="pure-menu-item pure-menu-selected">
+            <a href="/inspiration" className="pure-menu-link">Inspiration</a>
         </li>
         {
                 (localStorage.getItem("ss_token") !== null) ?
@@ -48,45 +51,6 @@ export const NavBar = () => {
                     </>
                              } </ul>
 </nav>
-        // <nav className="navbar navbar-expand-lg" style={{
-        //     backgroundColor:`#90e0b9`}}>
-        //     <a className="navbar-brand" href="/">SylvanServing</a>
-        //    <ul className="navbar-item"></ul>
-            
-        //     <li className="navbar__item">
-        //         <Link className="navbar_item" to="/deckfeed">Deck List Feed</Link>
-        //     </li>
-        //     <li className="navbar__item">
-        //         <Link className="navbar_item" to="/events">Events</Link>
-        //     </li>
-        //     <li className="navbar__item">
-        //         <Link className="navbar_item" to="/MyDeckList">My Decks</Link>
-        //     </li>
-        //     <li className="navbar__item">
-        //         <Link className="navbar_item" to="/decks/new">Create New Deck</Link>
-        //     </li>
-        //     <li className="navbar__item">
-        //         <Link className="navbar_item" to="/info">Rules And Info</Link>
-        //     </li>
-            
-        //     {
-        //         (localStorage.getItem("ss_token") !== null) ?
-                    
-        //                 <button  type="button" className="pure-button"
-        //                     onClick={() => {
-        //                         localStorage.removeItem("ss_token")
-        //                         history.push({ pathname: "/" })
-        //                     }}
-        //                 >Logout</button>
-        //              :
-        //             <>
-        //                 <li className="nav-item">
-        //                     <Link className="nav-link" to="/login">Login</Link>
-        //                 </li>
-        //                 <li className="nav-item">
-        //                     <Link className="nav-link" to="/register">Register</Link>
-        //                 </li>
-        //             </>
-        //     }        </nav>
+       
     )
 }
