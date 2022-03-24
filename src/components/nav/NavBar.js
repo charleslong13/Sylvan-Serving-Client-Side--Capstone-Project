@@ -27,6 +27,9 @@ export const NavBar = () => {
         <li className="pure-menu-item pure-menu-selected">
             <a href="/info" className="pure-menu-link">Rules and Info</a>
         </li>
+        <li className="pure-menu-item pure-menu-selected">
+            <a href="/inspiration" className="pure-menu-link">Inspiration</a>
+        </li>
         {
                 (localStorage.getItem("ss_token") !== null) ?
                     

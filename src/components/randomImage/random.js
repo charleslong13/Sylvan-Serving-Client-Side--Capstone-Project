@@ -19,7 +19,7 @@ class App extends Component {
     return (
       <section className="app">
       <p></p>
-        <center><p> Get some inspiration for your next deck here. Check it out!</p></center>
+        <center><p>Here is a random Legendary Creature that you can build a deck around. Check it out!</p></center>
         <PhotoContainer photos={this.state.photos} />
       </section>
     )
