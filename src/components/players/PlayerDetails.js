@@ -30,7 +30,7 @@ export const PlayerDetails = () => {
     if (isLoading) return <>Loading data...</>
     return (
         <>
-        <center><h2>Player Details</h2></center>
+        <center><h1>Player Details</h1></center>
             <div className="playerDetail"></div>
             <div key={`playerDetails.id-${playerDetails.id}`} className="player">
                 <center><b><div>Username: </div></b>
@@ -55,7 +55,7 @@ export const PlayerDetails = () => {
                                     <div className="deckList">{completedDecks.powerLevel}</div>
                                     <p></p>
                                     <b><div className="deckList">Primer:</div></b>
-                                    <div className="deckList">{completedDecks.primer}</div>
+                                    <div className="primer">{completedDecks.primer}</div>
                                 </div>
                                 </div>
                                 <p></p>
