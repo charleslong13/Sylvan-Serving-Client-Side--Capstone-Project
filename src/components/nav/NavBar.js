@@ -10,7 +10,7 @@ export const NavBar = () => {
             
     <ul className="pure-menu-list">
         <li className="pure-menu-item pure-menu-selected">
-            <a href="/" className="pure-menu-link">Sylvan Serving</a>
+            <a className="home_link"href="/" className="pure-menu-link" style={{fontFamily: "Amita"}}>Sylvan Serving</a>
         </li>
         <li className="pure-menu-item pure-menu-selected">
             <a href="/deckfeed" className="pure-menu-link">Deck List Feed</a>

@@ -1,9 +1,23 @@
+
 .home {
     color: rgb(4, 41, 4);
+    /* background-image: url('../images/tree_icon.png');
+    background-repeat: no-repeat;
+    background-position-x: left;
+    background-position-y: top; */
+    
+    
 }
 
 .card-img-top {
     max-width: 50%;
     max-width: 50%;
     border-radius: 10%;
+    
+}
+
+
+.image {
+    height: 150px;
+    width: 150px;
 }

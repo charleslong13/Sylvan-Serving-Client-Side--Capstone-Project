@@ -32,7 +32,8 @@ export const DeckList = () => {
             <div className="pure-g">
                 
                     <div className="pure-u-1-4 "style={{backgroundColor:'#79d9ab'}}>
-                        Click on a title or username for deck details
+                        Click on a title or username for more details
+                    <center><img src="https://res.cloudinary.com/dh0gsmquh/image/upload/v1648144095/Free-HD-Mtg-Photos-Download-768x480_pkz4or.jpg" alt="" style={{maxHeight:'500px', maxWidth:'300px', borderRadius:'5px'}}></img></center>
                     </div> 
 
                         <div className="pure-u-1-2"style={{backgroundColor:'#79d9ab'}}>
@@ -65,7 +66,8 @@ export const DeckList = () => {
                             </div>
                             </div>
                             <div className="pure-u-1-4"style={{backgroundColor:'#79d9ab'}}>
-                                View what decks other players are making!              
+                                View what decks other players are making!          
+                                <center><img src="https://res.cloudinary.com/dh0gsmquh/image/upload/v1648144168/Free-Mtg-Backgrounds-768x480_nnjfn6.jpg" alt="" style={{maxHeight:'500px', maxWidth:'300px', borderRadius:'5px'}}></img></center>    
                             </div>
                             </div>
                             

@@ -1,6 +1,4 @@
-*{
-    color: #05386B;
-}
+
 .deckList1 {
     white-space: pre-line;
     /* text-align: left; */
@@ -11,6 +9,7 @@
         -webkit-column-gap: 40px;
         -moz-column-gap: 40px;
         column-gap: 40px; /* Specifying Column Gap */
+        
 }
 .deckList1 {
     white-space: pre-line;
