@@ -14,7 +14,10 @@
 
 .button-active {
   display: inline-flex;
-  margin-left: 77%;
+  margin-left: 74%;
   justify-content: flex-end;
 }
 
+.home_link {
+  font-family:'Amita';
+}

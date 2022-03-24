@@ -1,14 +1,24 @@
+
+import App from "../randomImage/random"
 import "./home.css"
+
+
+
+
+
+
 
 export const Home = () => {
     return (
         <>
             <div className="home" 
             >
-                <center>
                 <h1 className="homeTitle">
-                    <i>Welcome to Sylvan Serving</i>
+                    <center><i>Welcome to Sylvan Serving</i>
+                    <p></p>
+                    <img className="image" src="https://res.cloudinary.com/dh0gsmquh/image/upload/v1648141220/tree_icon_sd2ria.png" alt=""></img></center>
                 </h1>
+                <center>
                 <div className="aboutUsBody">
                     <h5 className="aboutUsTitle">
                         <div>An MTG Commander Companion App</div>
@@ -20,10 +30,13 @@ export const Home = () => {
                             <div style={{fontSize:'20px'}}>View what decks other users are playing,</div>
                             <div style={{fontSize:'20px'}}>Create or RSVP to new Game Night events,</div>
                             <div style={{fontSize:'20px'}}>And more!</div>
-
+                            <p></p><p></p>
                         </div>
                     </div>
-                    
+                    <div className="card" style={{backgroundColor:'#79d9ab'}}>
+                        <p></p>
+                    <App />
+                    </div>
                 </div></center>
             </div>
         </>

@@ -64,7 +64,7 @@ export const DeckForm = ({ editDeck }) => {
 
     return (
         <form className="deckForm">
-            <h2 className="deckFormTitle">New Deck List</h2>
+            <h1 className="deckFormTitle">New Deck List</h1>
             <fieldset>
                 <div className="form-group">
                     <label htmlFor="title" >Deck Title: </label>
