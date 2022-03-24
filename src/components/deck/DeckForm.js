@@ -79,21 +79,7 @@ export const DeckForm = ({ editDeck }) => {
                     />
                 </div>
             </fieldset>
-            <fieldset>
-                <div className="form-group">
-                    <label htmlFor="playStyle">Play Style: </label>
-                    <select type="number" name="playStyle" required autoFocus className="form-control"
-                        value={currentDeck.playStyle}
-                        onChange={changeDeckState}>
-                        <option value="">Select a Play Style</option>
-                        {
-                            playStyle.map((playStyle) => {
-                                return <option key={playStyle.id} value={playStyle.id}>{playStyle.label}</option>
-                            })
-                        }
-                    </select>
-                </div>
-            </fieldset>
+           
             <fieldset>
                 <div className="form-group">
                     <label htmlFor="commander" >Who is your Commander?: </label>
@@ -230,6 +216,21 @@ export const DeckForm = ({ editDeck }) => {
                         className="form-control"
                         placeholder="How many games has this deck lost?"
                     />
+                </div>
+            </fieldset>
+            <fieldset>
+                <div className="form-group">
+                    <label htmlFor="playStyle">Play Style: </label>
+                    <select type="number" name="playStyle" required autoFocus className="form-control"
+                        value={currentDeck.playStyle}
+                        onChange={changeDeckState}>
+                        <option value="">Select a Play Style</option>
+                        {
+                            playStyle.map((playStyle) => {
+                                return <option key={playStyle.id} value={playStyle.id}>{playStyle.label}</option>
+                            })
+                        }
+                    </select>
                 </div>
             </fieldset>
             <fieldset>

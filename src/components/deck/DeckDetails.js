@@ -57,8 +57,8 @@ export const DeckDetails = () => {
                             <b><div className="deckList">Power Level:</div></b>
                             <div className="deckList">{deckDetails.powerLevel}</div>
                             <p></p>
-                            <b><div className="deckList">Primer:</div></b>
-                            <div className="deckList">{deckDetails.primer}</div>
+                            <b><div className="decklist">Primer:</div></b>
+                            <div className="primer" style={{alignItems: 'left'}}>{deckDetails.primer}</div>
                             </div>
                             <p></p>
                             <div className='control'>

@@ -13,8 +13,18 @@
 }
 .deckList1 {
     white-space: pre-line;
-    /* text-align: left; */
     
+    
+}
+.primer {
+    white-space: pre-line;
+    text-align: left;
+    overflow: hidden;
+    box-shadow: 0 2px 20px #2e8b57;
+    border-radius: 25px;
+    padding: 20px;
+    width: auto;
+    height: auto;
 }
 
 .card {
@@ -25,3 +35,4 @@
     width: auto;
     height: auto;
 }
+
